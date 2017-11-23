@@ -12,6 +12,11 @@
 		CF7A81D41FC57B86005C03E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF7A81D21FC57B86005C03E4 /* Main.storyboard */; };
 		CF7A81D61FC57B86005C03E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF7A81D51FC57B86005C03E4 /* Assets.xcassets */; };
 		CF7A81D91FC57B86005C03E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF7A81D71FC57B86005C03E4 /* LaunchScreen.storyboard */; };
+		CF7A81E21FC57BCF005C03E4 /* HTPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7A81E11FC57BCF005C03E4 /* HTPageView.swift */; };
+		CF7A81E41FC5B7B9005C03E4 /* HTTitleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7A81E31FC5B7B9005C03E4 /* HTTitleStyle.swift */; };
+		CF7A81E61FC5B9D7005C03E4 /* HTTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7A81E51FC5B9D7005C03E4 /* HTTitleView.swift */; };
+		CF7A81E81FC5BBCA005C03E4 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7A81E71FC5BBCA005C03E4 /* UIColor+Extension.swift */; };
+		CF7A81EA1FC5C06F005C03E4 /* HTContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7A81E91FC5C06F005C03E4 /* HTContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		CF7A81D51FC57B86005C03E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF7A81D81FC57B86005C03E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF7A81DA1FC57B86005C03E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF7A81E11FC57BCF005C03E4 /* HTPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTPageView.swift; sourceTree = "<group>"; };
+		CF7A81E31FC5B7B9005C03E4 /* HTTitleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTitleStyle.swift; sourceTree = "<group>"; };
+		CF7A81E51FC5B9D7005C03E4 /* HTTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTitleView.swift; sourceTree = "<group>"; };
+		CF7A81E71FC5BBCA005C03E4 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		CF7A81E91FC5C06F005C03E4 /* HTContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,27 @@
 		CF7A81CD1FC57B86005C03E4 /* HTPageViewExample */ = {
 			isa = PBXGroup;
 			children = (
+				CF7A81E01FC57BAD005C03E4 /* HTPageView */,
 				CF7A81CE1FC57B86005C03E4 /* AppDelegate.swift */,
 				CF7A81D01FC57B86005C03E4 /* ViewController.swift */,
+				CF7A81E71FC5BBCA005C03E4 /* UIColor+Extension.swift */,
 				CF7A81D21FC57B86005C03E4 /* Main.storyboard */,
 				CF7A81D51FC57B86005C03E4 /* Assets.xcassets */,
 				CF7A81D71FC57B86005C03E4 /* LaunchScreen.storyboard */,
 				CF7A81DA1FC57B86005C03E4 /* Info.plist */,
 			);
 			path = HTPageViewExample;
+			sourceTree = "<group>";
+		};
+		CF7A81E01FC57BAD005C03E4 /* HTPageView */ = {
+			isa = PBXGroup;
+			children = (
+				CF7A81E11FC57BCF005C03E4 /* HTPageView.swift */,
+				CF7A81E91FC5C06F005C03E4 /* HTContentView.swift */,
+				CF7A81E51FC5B9D7005C03E4 /* HTTitleView.swift */,
+				CF7A81E31FC5B7B9005C03E4 /* HTTitleStyle.swift */,
+			);
+			path = HTPageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +159,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF7A81EA1FC5C06F005C03E4 /* HTContentView.swift in Sources */,
+				CF7A81E61FC5B9D7005C03E4 /* HTTitleView.swift in Sources */,
+				CF7A81E41FC5B7B9005C03E4 /* HTTitleStyle.swift in Sources */,
 				CF7A81D11FC57B86005C03E4 /* ViewController.swift in Sources */,
+				CF7A81E81FC5BBCA005C03E4 /* UIColor+Extension.swift in Sources */,
 				CF7A81CF1FC57B86005C03E4 /* AppDelegate.swift in Sources */,
+				CF7A81E21FC57BCF005C03E4 /* HTPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +303,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3JA53WRFWZ;
 				INFOPLIST_FILE = HTPageViewExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.puc.presto.ewallet.HTPageViewExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,7 +319,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3JA53WRFWZ;
 				INFOPLIST_FILE = HTPageViewExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.puc.presto.ewallet.HTPageViewExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";

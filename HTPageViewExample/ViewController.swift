@@ -10,16 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+        let titles = ["aa","bb","cc"]
+        let titleStyle = HTTitleStyle()
+        var childVc = [UIViewController]()
+        for _ in titles {
+            let vc = UIViewController()
+            childVc.append(vc)
+        }
+        let pageframe = CGRect(x: 0, y: 100, width: view.frame.size.width, height: 400)
+        let  pageView  = HTPageView(frame: pageframe, titles: titles, childVcs: childVc, parentVc: self, titleStyle: titleStyle)
+        pageView.backgroundColor = UIColor.yellow
+      
+        view.addSubview(pageView)
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
