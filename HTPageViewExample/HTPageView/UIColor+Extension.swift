@@ -30,6 +30,8 @@ extension UIColor {
         guard let cmps = cgColor.components else {
              fatalError("保证普通颜色是RGB方式传入")
         }
+    
+        
         return (cmps[0] * 255, cmps[1] * 255, cmps[2] * 255)
     }
     

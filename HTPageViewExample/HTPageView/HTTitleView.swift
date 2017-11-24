@@ -12,6 +12,7 @@ protocol HTTitileViewDelegate: class {
     func titleView(_ titleView: HTTitleView, didSelectedidx: Int) -> ()
 }
 
+private let zoomScale : CGFloat = 0.2
 class HTTitleView: UIView {
 
     // MARK: - 定义属性
@@ -25,6 +26,13 @@ class HTTitleView: UIView {
        let scrollView = UIScrollView(frame: self.bounds)
         scrollView.showsHorizontalScrollIndicator = false
         return scrollView
+    }()
+    fileprivate lazy var bottomLine: UIView = {
+       let bottomLine = UIView()
+        bottomLine.backgroundColor = self.style.bottomLineColor
+        bottomLine.frame.size.height = self.style.bottomLineHeight
+        bottomLine.frame.origin.y = self.bounds.height - self.style.bottomLineHeight
+        return bottomLine
     }()
     
     init(frame: CGRect, titles: [String], style: HTTitleStyle){
@@ -48,6 +56,10 @@ extension HTTitleView {
         addTitleToScroll()
         // 布局title
         setUpTitlesLayout()
+        // 添加滚动条
+        if style.isShowBottomLine {
+            scrollView.addSubview(bottomLine)
+        }
     }
     
     private func addTitleToScroll(){
@@ -66,7 +78,6 @@ extension HTTitleView {
             let tapGse = UITapGestureRecognizer(target: self, action: #selector(titleItemClick(_:)))
             titleLable.isUserInteractionEnabled = true
             titleLable.addGestureRecognizer(tapGse)
-            
         }
     }
     
@@ -88,15 +99,27 @@ extension HTTitleView {
                 // 计算x
                 if i == 0{
                     x = style.itemMargin * 0.5
+                    if style.isShowBottomLine{
+                        bottomLine.frame.origin.x = x
+                        bottomLine.frame.size.width = w
+                    }
                 }else{
                     x = titleLabels[i - 1].frame.maxX + style.itemMargin
                 }
             }else{
               w = bounds.width / CGFloat(titleCount)
               x = w * CGFloat(i)
+                if style.isShowBottomLine {
+                    bottomLine.frame.origin.x = 0
+                    bottomLine.frame.size.width = w
+                }
             }
             
             label.frame = CGRect(x: x, y: y, width: w, height: h)
+            
+            if i == 0 && style.isTitleZoom{
+                label.transform = CGAffineTransform(scaleX: 1.0 + zoomScale, y: 1.0 + zoomScale)
+            }
         }
         scrollView.contentSize = style.isScrollEnable ? CGSize(width: titleLabels.last!.frame.maxX + style.itemMargin * 0.5, height: 0) : CGSize.zero
     }
@@ -109,6 +132,12 @@ extension HTTitleView{
         let targetLabel =  tapges.view as! UILabel
         
         adjustTitleLable(targetLabel.tag)
+        if style.isShowBottomLine{
+            UIView.animate(withDuration: 0.25, animations: {
+                self.bottomLine.frame.origin.x = targetLabel.frame.origin.x
+                self.bottomLine.frame.size.width = targetLabel.frame.size.width
+            })
+        }
         delegate?.titleView(self, didSelectedidx: targetLabel.tag)
     }
     
@@ -132,6 +161,12 @@ extension HTTitleView{
             }
             scrollView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: true)
         }
+        if style.isTitleZoom {
+            UIView.animate(withDuration: 0.25, animations: {
+                targetLable.transform = CGAffineTransform(scaleX: 1.0 + zoomScale, y: 1.0 + zoomScale)
+                sourceLabel.transform = CGAffineTransform.identity
+            })
+        }
     }
 }
 
@@ -153,7 +188,20 @@ extension HTTitleView: HTContentViewDelegate{
         targetLable.textColor = UIColor(r: normalRGB.0 + daltaRGB.0 * progress, g: normalRGB.1 + daltaRGB.1 * progress, b: normalRGB.2 + daltaRGB.2 * progress)
         
         sourceLabel.textColor = UIColor(r: selectRGB.0 - daltaRGB.0 * progress, g: selectRGB.1 - daltaRGB.1 * progress, b: selectRGB.2 - daltaRGB.2 * progress)
-
+        if style.isShowBottomLine {
+            let deltaX = targetLable.frame.origin.x - sourceLabel.frame.origin.x
+            let deltaW =  targetLable.frame.size.width - sourceLabel.frame.size.width
+            bottomLine.frame.origin.x = sourceLabel.frame.origin.x + deltaX * progress
+            bottomLine.frame.size.width = sourceLabel.frame.size.width + deltaW * progress
+        }
+       
+        if style.isTitleZoom {
+            let targetScale = 1.0 + progress * zoomScale
+            targetLable.transform = CGAffineTransform(scaleX:targetScale, y: targetScale)
+            let soucrScale = (1.0 + zoomScale) - (progress * 0.2)
+            sourceLabel.transform = CGAffineTransform(scaleX: soucrScale, y: soucrScale)
+            
+        }
     }
 }
 

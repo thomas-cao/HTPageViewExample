@@ -34,6 +34,7 @@ class HTContentView: UIView {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.isPagingEnabled = true
+        collectionView.bounces = false
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.scrollsToTop = false
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kContainerCellID)
@@ -99,7 +100,6 @@ extension HTContentView : UICollectionViewDataSource, UICollectionViewDelegate{
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("scrollViewDidScroll")
         computationsIndex(scrollView)
     }
     

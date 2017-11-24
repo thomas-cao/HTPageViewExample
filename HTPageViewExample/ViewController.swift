@@ -20,9 +20,10 @@ class ViewController: UIViewController {
         
         let titleStyle = HTTitleStyle()
         titleStyle.isScrollEnable = true
-        titleStyle.normalTextColor = UIColor.yellow
-        titleStyle.selectedTextColor = UIColor.red
+//        titleStyle.normalTextColor = UIColor.yellow
+        titleStyle.selectedTextColor = UIColor.purple
         titleStyle.titleFont = UIFont.boldSystemFont(ofSize: 16)
+
         var childVc = [UIViewController]()
         for _ in titles {
             let vc = UIViewController()
