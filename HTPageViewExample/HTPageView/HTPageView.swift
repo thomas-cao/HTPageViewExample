@@ -47,11 +47,12 @@ extension HTPageView{
     
     fileprivate func setContentView(){
         
-        let contentView = HTContentView()
-        contentView.frame = CGRect(x: 0, y: titleStyle.titleViewHeight, width: bounds.size.width, height: bounds.size.height - titleStyle.titleViewHeight)
-        contentView.backgroundColor = UIColor.randomColor()
+        let contentFrame = CGRect(x: 0, y: titleStyle.titleViewHeight, width: bounds.size.width, height: bounds.size.height - titleStyle.titleViewHeight)
+        let contentView = HTContentView(frame: contentFrame, childVcs: childVcs, parentVc: parentVc)
         addSubview(contentView)
         
+        titleView.delegate = contentView
+        contentView.delegate = titleView
     }
     
 }

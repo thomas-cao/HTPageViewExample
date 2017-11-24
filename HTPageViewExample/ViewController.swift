@@ -15,8 +15,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        let titles = ["aa","bb","cc"]
+//        let titles = ["aa","bb","cc"]
+        let titles = ["美女","段子","特大新闻","我","清凉一夏","直播中","科技与农业","新闻","要闻","国际新闻","美图秀秀","油"];
+        
         let titleStyle = HTTitleStyle()
+        titleStyle.isScrollEnable = true
+        titleStyle.normalTextColor = UIColor.yellow
+        titleStyle.selectedTextColor = UIColor.red
+        titleStyle.titleFont = UIFont.boldSystemFont(ofSize: 16)
         var childVc = [UIViewController]()
         for _ in titles {
             let vc = UIViewController()

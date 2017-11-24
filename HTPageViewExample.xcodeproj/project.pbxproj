@@ -67,7 +67,6 @@
 				CF7A81E01FC57BAD005C03E4 /* HTPageView */,
 				CF7A81CE1FC57B86005C03E4 /* AppDelegate.swift */,
 				CF7A81D01FC57B86005C03E4 /* ViewController.swift */,
-				CF7A81E71FC5BBCA005C03E4 /* UIColor+Extension.swift */,
 				CF7A81D21FC57B86005C03E4 /* Main.storyboard */,
 				CF7A81D51FC57B86005C03E4 /* Assets.xcassets */,
 				CF7A81D71FC57B86005C03E4 /* LaunchScreen.storyboard */,
@@ -79,6 +78,7 @@
 		CF7A81E01FC57BAD005C03E4 /* HTPageView */ = {
 			isa = PBXGroup;
 			children = (
+				CF7A81E71FC5BBCA005C03E4 /* UIColor+Extension.swift */,
 				CF7A81E11FC57BCF005C03E4 /* HTPageView.swift */,
 				CF7A81E91FC5C06F005C03E4 /* HTContentView.swift */,
 				CF7A81E51FC5B9D7005C03E4 /* HTTitleView.swift */,
