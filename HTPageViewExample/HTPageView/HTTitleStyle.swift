@@ -16,7 +16,7 @@ class HTTitleStyle{
     // title 之间的间距
     var itemMargin: CGFloat = 15
     // 默认文字颜色
-    var normalTextColor: UIColor = UIColor.orange
+    var normalTextColor: UIColor = UIColor.yellow
     // 选中的颜色
     var selectedTextColor: UIColor = UIColor.red
     var titleFont: UIFont = UIFont.systemFont(ofSize: 15)

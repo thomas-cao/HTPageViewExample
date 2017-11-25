@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     
 //        let titles = ["aa","bb","cc"]
-        let titles = ["美女","段子","特大新闻","我","清凉一夏","直播中","科技与农业","新闻","要闻","国际新闻","美图秀秀","油"];
+        let titles = ["美女","段子","特大新闻","我","清凉一夏","直播中"];
         
         let titleStyle = HTTitleStyle()
         titleStyle.isScrollEnable = true
@@ -25,11 +25,26 @@ class ViewController: UIViewController {
         titleStyle.titleFont = UIFont.boldSystemFont(ofSize: 16)
 
         var childVc = [UIViewController]()
-        for _ in titles {
-            let vc = UIViewController()
-            childVc.append(vc)
-        }
-        let pageframe = CGRect(x: 0, y: 100, width: view.frame.size.width, height: 400)
+//        for _ in titles {
+//            let vc = UIViewController()
+//            childVc.append(vc)
+//        }
+        
+        let vc1 = ViewController1()
+        childVc.append(vc1)
+        let vc2 = ViewController2()
+        childVc.append(vc2)
+        let vc3 = ViewController3()
+        childVc.append(vc3)
+        let vc4 = ViewController4()
+        childVc.append(vc4)
+        let vc5 = ViewController5()
+        childVc.append(vc5)
+
+        let vc6 = ViewController6()
+        childVc.append(vc6)
+        
+        let pageframe = CGRect(x: 0, y: 64, width: view.frame.size.width, height: view.frame.size.height - 64)
         let  pageView  = HTPageView(frame: pageframe, titles: titles, childVcs: childVc, parentVc: self, titleStyle: titleStyle)
         pageView.backgroundColor = UIColor.yellow
       
