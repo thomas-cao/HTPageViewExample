@@ -2,7 +2,7 @@
 //  ViewController1.swift
 //  HTPageViewExample
 //
-//  Created by emppu－cao on 2017/11/25.
+//  Created by 魏小庄 on 2017/11/25.
 //  Copyright © 2017年 魏小庄. All rights reserved.
 //
 
