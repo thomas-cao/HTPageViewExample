@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF0F7F4C1FD79016000B9F1D /* liveChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F7F4B1FD79016000B9F1D /* liveChatViewController.swift */; };
+		CF0F7F4E1FD79446000B9F1D /* chatToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F7F4D1FD79446000B9F1D /* chatToolsView.swift */; };
+		CF0F7F501FD79461000B9F1D /* chatToolsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0F7F4F1FD79461000B9F1D /* chatToolsView.xib */; };
+		CF0F7F541FD7CCC2000B9F1D /* EmotionkeyBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F7F531FD7CCC2000B9F1D /* EmotionkeyBoardView.swift */; };
+		CF0F7F561FD7D026000B9F1D /* HTPageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F7F551FD7D026000B9F1D /* HTPageCollectionView.swift */; };
+		CF0F7F581FD7D090000B9F1D /* HTPageCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0F7F571FD7D090000B9F1D /* HTPageCollectionViewLayout.swift */; };
 		CF476FD11FC92FAF009E1867 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF476FD01FC92FAF009E1867 /* ViewController1.swift */; };
 		CF476FD31FC92FB7009E1867 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF476FD21FC92FB7009E1867 /* ViewController2.swift */; };
 		CF476FD51FC92FBF009E1867 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF476FD41FC92FBF009E1867 /* ViewController3.swift */; };
@@ -26,6 +32,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF0F7F4B1FD79016000B9F1D /* liveChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = liveChatViewController.swift; sourceTree = "<group>"; };
+		CF0F7F4D1FD79446000B9F1D /* chatToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatToolsView.swift; sourceTree = "<group>"; };
+		CF0F7F4F1FD79461000B9F1D /* chatToolsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = chatToolsView.xib; sourceTree = "<group>"; };
+		CF0F7F531FD7CCC2000B9F1D /* EmotionkeyBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionkeyBoardView.swift; sourceTree = "<group>"; };
+		CF0F7F551FD7D026000B9F1D /* HTPageCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTPageCollectionView.swift; sourceTree = "<group>"; };
+		CF0F7F571FD7D090000B9F1D /* HTPageCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTPageCollectionViewLayout.swift; sourceTree = "<group>"; };
 		CF476FD01FC92FAF009E1867 /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
 		CF476FD21FC92FB7009E1867 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		CF476FD41FC92FBF009E1867 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
@@ -92,6 +104,10 @@
 				CF7A81E01FC57BAD005C03E4 /* HTPageView */,
 				CF7A81CE1FC57B86005C03E4 /* AppDelegate.swift */,
 				CF7A81D01FC57B86005C03E4 /* ViewController.swift */,
+				CF0F7F4B1FD79016000B9F1D /* liveChatViewController.swift */,
+				CF0F7F4D1FD79446000B9F1D /* chatToolsView.swift */,
+				CF0F7F531FD7CCC2000B9F1D /* EmotionkeyBoardView.swift */,
+				CF0F7F4F1FD79461000B9F1D /* chatToolsView.xib */,
 				CF476FCF1FC92F95009E1867 /* childVC */,
 				CF7A81D21FC57B86005C03E4 /* Main.storyboard */,
 				CF7A81D51FC57B86005C03E4 /* Assets.xcassets */,
@@ -109,6 +125,8 @@
 				CF7A81E91FC5C06F005C03E4 /* HTContentView.swift */,
 				CF7A81E51FC5B9D7005C03E4 /* HTTitleView.swift */,
 				CF7A81E31FC5B7B9005C03E4 /* HTTitleStyle.swift */,
+				CF0F7F551FD7D026000B9F1D /* HTPageCollectionView.swift */,
+				CF0F7F571FD7D090000B9F1D /* HTPageCollectionViewLayout.swift */,
 			);
 			path = HTPageView;
 			sourceTree = "<group>";
@@ -174,6 +192,7 @@
 			files = (
 				CF7A81D91FC57B86005C03E4 /* LaunchScreen.storyboard in Resources */,
 				CF7A81D61FC57B86005C03E4 /* Assets.xcassets in Resources */,
+				CF0F7F501FD79461000B9F1D /* chatToolsView.xib in Resources */,
 				CF7A81D41FC57B86005C03E4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,13 +208,18 @@
 				CF476FD11FC92FAF009E1867 /* ViewController1.swift in Sources */,
 				CF476FD71FC92FC8009E1867 /* ViewController4.swift in Sources */,
 				CF7A81EA1FC5C06F005C03E4 /* HTContentView.swift in Sources */,
+				CF0F7F4C1FD79016000B9F1D /* liveChatViewController.swift in Sources */,
+				CF0F7F4E1FD79446000B9F1D /* chatToolsView.swift in Sources */,
+				CF0F7F581FD7D090000B9F1D /* HTPageCollectionViewLayout.swift in Sources */,
 				CF476FD91FC92FD0009E1867 /* ViewController5.swift in Sources */,
 				CF476FD31FC92FB7009E1867 /* ViewController2.swift in Sources */,
 				CF7A81E61FC5B9D7005C03E4 /* HTTitleView.swift in Sources */,
 				CF7A81E41FC5B7B9005C03E4 /* HTTitleStyle.swift in Sources */,
 				CF7A81D11FC57B86005C03E4 /* ViewController.swift in Sources */,
+				CF0F7F541FD7CCC2000B9F1D /* EmotionkeyBoardView.swift in Sources */,
 				CF7A81E81FC5BBCA005C03E4 /* UIColor+Extension.swift in Sources */,
 				CF476FDB1FC92FDA009E1867 /* ViewController6.swift in Sources */,
+				CF0F7F561FD7D026000B9F1D /* HTPageCollectionView.swift in Sources */,
 				CF7A81CF1FC57B86005C03E4 /* AppDelegate.swift in Sources */,
 				CF7A81E21FC57BCF005C03E4 /* HTPageView.swift in Sources */,
 			);

@@ -141,7 +141,8 @@ extension HTTitleView{
         delegate?.titleView(self, didSelectedidx: targetLabel.tag)
     }
     
-    fileprivate func adjustTitleLable(_ targetIdx: Int){
+    // 对外暴露
+     func adjustTitleLable(_ targetIdx: Int){
         if targetIdx == currentIdx {return}
         // 取出label
         let targetLable = titleLabels[targetIdx]
