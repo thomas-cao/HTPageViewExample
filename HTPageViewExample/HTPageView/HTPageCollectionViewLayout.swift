@@ -2,7 +2,7 @@
 //  HTPageCollectionViewLayout.swift
 //  HTPageViewExample
 //
-//  Created by emppu－cao on 2017/12/6.
+//  Created by 魏小庄 on 2017/12/6.
 //  Copyright © 2017年 魏小庄. All rights reserved.
 //
 
@@ -15,7 +15,6 @@ class HTPageCollectionViewLayout: UICollectionViewFlowLayout {
     
     fileprivate lazy var cellAttrs: [UICollectionViewLayoutAttributes] = [UICollectionViewLayoutAttributes]()
     fileprivate lazy var maxWidth: CGFloat = 0
-    
 }
 
 extension HTPageCollectionViewLayout{
